@@ -1,0 +1,5 @@
+<% if object.tag(:abstract).text.empty? -%>
+<Info>**Abstract.**</Info>
+<% elsif object.tag(:abstract) -%>
+<Info>**Abstract.** <%= resolve_links object.tag(:abstract).text %></Info>
+<% end -%>

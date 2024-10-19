@@ -1,0 +1,27 @@
+<% if @intrinsics.any? -%>
+<dl className="not-prose">
+<% @intrinsics.each do |name, value| -%>
+<dt>**<%= name %>:**</dt><dd><%= value %></dd>
+<% end -%>
+</dl>
+<% end -%>
+<% if @intrinsics.any? && @extrinsics.any? -%>
+--------
+<% end -%>
+<% if @extrinsics.any? -%>
+<dl className="not-prose">
+<% @extrinsics.each do |name, value| -%>
+<dt>**<%= name %>:**</dt><dd><%= value %></dd>
+<% end -%>
+</dl>
+<% end -%>
+<% if (@intrinsics.any? || @extrinsics.any?) && @children.any? -%>
+--------
+<% end -%>
+<% if @children.any? -%>
+<dl className="not-prose">
+<% @children.each do |name, value| -%>
+<dt>**<%= name %>:**</dt><dd><%= value %></dd>
+<% end -%>
+</dl>
+<% end -%>

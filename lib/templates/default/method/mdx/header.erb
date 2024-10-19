@@ -1,0 +1,7 @@
+<MethodSignature scope=<%= object.sep.inspect %>>
+### `<%= object.sep %><%= object.name %>`
+```ruby
+<%= object.signature %>
+<%= object.aliases.map {|o| "# aliased as #{o.name(false)}\n" }.join if object.aliases.any? -%>
+```
+</MethodSignature>

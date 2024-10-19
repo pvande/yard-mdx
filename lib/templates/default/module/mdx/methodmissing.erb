@@ -1,0 +1,9 @@
+## Unknown Method Handling
+
+<% if @mm.namespace == object -%>
+<%= yieldall :object => @mm, :index => 0 %>
+<% else -%>
+<Info>
+  This <%= object.type %> inherits undefined method handling from `<%= linkify @mm, @mm.namespace.path %>`.
+</Info>
+<% end -%>

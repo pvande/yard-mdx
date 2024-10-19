@@ -1,0 +1,6 @@
+<% title = (defined?(@label) && @label) ? @label : YARD::Tags::Library.labels[@name] -%>
+
+#### <%= title %>
+<% object.tags(@name).each do |tag| -%>
+* <%= indent(param_component(tag)).lstrip %>
+<% end -%>

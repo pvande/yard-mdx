@@ -1,0 +1,3 @@
+<% object.tags(:note).each do |tag| -%>
+<Callout className="bg-black/5 dark:bg-white/5"><%= resolve_links tag.text %></Callout>
+<% end -%>

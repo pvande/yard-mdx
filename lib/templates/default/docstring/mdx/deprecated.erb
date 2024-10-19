@@ -1,0 +1,5 @@
+<% if object.tag(:deprecated).text.empty? -%>
+<Warning>**Deprecated.**</Warning>
+<% elsif object.tag(:deprecated) -%>
+<Warning>**Deprecated.** <%= resolve_links object.tag(:deprecated).text %></Warning>
+<% end -%>

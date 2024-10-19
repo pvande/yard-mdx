@@ -1,0 +1,13 @@
+<% if object.has_tag?(:example) -%>
+
+#### Examples
+<% object.tags(:example).each do |tag| %>
+<% if tag.name.empty? -%>
+``` ruby
+<% else -%>
+``` ruby title=<%= tag.name.inspect %>
+<% end -%>
+<%= tag.text %>
+```
+<% end -%>
+<% end -%>

@@ -1,0 +1,13 @@
+<% groups(constant_listing, "Constant") do |list, name| -%>
+## <%= name %>
+
+<% list.each do |cnst| -%>
+<Constant>
+### `<%= cnst.name %>`
+```ruby
+<%= cnst.name %> = <%= format_constant cnst.value %>
+```
+</Constant>
+<%= yieldall :object => cnst %>
+<% end -%>
+<% end -%>

@@ -1,0 +1,3 @@
+<% object.tags(:todo).each do |tag| -%>
+<Callout className="border">**TODO:** <%= resolve_links tag.text %></Callout>
+<% end -%>

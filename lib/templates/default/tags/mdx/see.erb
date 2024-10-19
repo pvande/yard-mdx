@@ -1,0 +1,5 @@
+
+#### See Also
+<% object.tags(:see).each do |tag| -%>
+* <%= linkify(tag.name, tag.text) %>
+<% end -%>

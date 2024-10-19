@@ -1,0 +1,6 @@
+
+#### Parameters
+<% object.tags(:param).each do |tag| -%>
+<%= param_component(tag) -%>
+<%= yieldall index: tag.name.to_s if object.respond_to?(:parameters) -%>
+<% end -%>

@@ -1,0 +1,7 @@
+<% groups(method_listing(false)) do |list, name| -%>
+## <%= name %>
+
+<% list.each_with_index do |meth, i| -%>
+<%= yieldall :object => meth, :owner => object, :index => i %>
+<% end -%>
+<% end -%>
