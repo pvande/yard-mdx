@@ -1,7 +1,6 @@
-<MethodSignature scope=<%= object.sep.inspect %>>
 ### `<%= object.sep %><%= object.name %>`
+
 ```ruby
-<%= object.signature %>
+<%= object.has_tag?(:overload) ? object.tags(:overload).map { |x| "def #{signature(x)}" }.join("\n") : "def #{signature(object)}" %>
 <%= object.aliases.map {|o| "# aliased as #{o.name(false)}\n" }.join if object.aliases.any? -%>
 ```
-</MethodSignature>
