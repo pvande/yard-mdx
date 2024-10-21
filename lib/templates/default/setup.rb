@@ -119,7 +119,7 @@ def signature_types(meth, link = true)
 end
 
 def resolve_alerts(source)
-  source.gsub(/^> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\n((?:^> .*\n)+)/) do |*args|
+  source.gsub(/^> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\n((?:^>(?: .*|$)\n)+)/) do |*args|
     type = $1
     content = indent($2.gsub(/^> /, ""))
     case type

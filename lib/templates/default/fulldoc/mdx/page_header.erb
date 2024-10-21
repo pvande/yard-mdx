@@ -1,5 +1,8 @@
 <style children="dl.not-prose { display: grid; grid: auto-flow / max-content 1fr; gap: 0.8em }" />
 <style children=".signature:not(:first-of-type) { border-top: solid thin var(--twoslash-border-color) }" />
+<style children=".prose :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)) { font-style: normal }" />
+<style children=".prose :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *))::before { content: '' }" />
+<style children=".prose :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *))::after { content: '' }" />
 
 export const Callout = ({className, icon, children, ...props}) => {
   return (
